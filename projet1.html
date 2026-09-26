@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Projet 1 de Blandy CONSTANTIN - Installation et configuration de Zabbix."
+    >
+
+    <title>
+        Projet 1 | Portfolio Blandy CONSTANTIN
+    </title>
+
+
+    <!-- CSS PRINCIPAL -->
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+
+    <!-- FONT AWESOME -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         BARRE DE NAVIGATION
+    ====================================================== -->
+
+    <nav class="navbar">
+
+
+        <!-- LOGO -->
+
+        <a
+            href="index.html"
+            class="logo"
+        >
+            PORTFOLIO BLANDY
+        </a>
+
+
+        <!-- MENU MOBILE -->
+
+        <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Ouvrir le menu"
+            aria-expanded="false"
+        >
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+
+        <!-- NAVIGATION -->
+
+        <ul class="nav-links">
+
+
+            <!-- ACCUEIL -->
+
+            <li>
+
+                <a href="index.html">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    Accueil
+
+                </a>
+
+            </li>
+
+
+            <!-- PROFIL -->
+
+            <li>
+
+                <a href="profil.html">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    Profil
+
+                </a>
+
+            </li>
+
+
+            <!-- =================================================
+                 PROJETS
+            ================================================== -->
+
+            <li class="dropdown">
+
+                <a
+                    href="#"
+                    class="dropdown-toggle active"
+                >
+
+                    <i class="fa-solid fa-diagram-project"></i>
+
+                    Projet
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </a>
+
+
+                <ul class="dropdown-menu">
+
+
+                    <!-- PROJET 1 -->
+
+                    <li>
+
+                        <a
+                            href="projet1.html"
+                            class="active"
+                        >
+
+                            <i class="fa-solid fa-server"></i>
+
+                            Projet 1
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- PROJET 2 -->
+
+                    <li>
+
+                        <a href="projet2.html">
+
+                            <i class="fa-solid fa-network-wired"></i>
+
+                            Projet 2
+
+                        </a>
+
+                    </li>
+
+
+                </ul>
+
+            </li>
+
+
+            <!-- =================================================
+                 STAGES
+            ================================================== -->
+
+            <li class="dropdown">
+
+                <a
+                    href="#"
+                    class="dropdown-toggle"
+                >
+
+                    <i class="fa-solid fa-briefcase"></i>
+
+                    Stage
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </a>
+
+
+                <ul class="dropdown-menu">
+
+
+                    <!-- STAGE 1 -->
+
+                    <li>
+
+                        <a href="stage1.html">
+
+                            <i class="fa-solid fa-building"></i>
+
+                            Stage 1
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- STAGE 2 -->
+
+                    <li>
+
+                        <a href="stage2.html">
+
+                            <i class="fa-solid fa-building"></i>
+
+                            Stage 2
+
+                        </a>
+
+                    </li>
+
+
+                </ul>
+
+            </li>
+
+
+            <!-- VEILLE -->
+
+            <li>
+
+                <a href="veille.html">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    Veille informatique
+
+                </a>
+
+            </li>
+
+
+            <!-- E5 -->
+
+            <li>
+
+                <a href="e5.html">
+
+                    <i class="fa-solid fa-graduation-cap"></i>
+
+                    E5
+
+                </a>
+
+            </li>
+
+
+            <!-- CONTACT -->
+
+            <li>
+
+                <a href="contact.html">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    Contact
+
+                </a>
+
+            </li>
+
+
+        </ul>
+
+    </nav>
+
+
+
+    <!-- =====================================================
+         CONTENU DU PROJET 1
+    ====================================================== -->
+
+    <main class="projet-container">
+
+
+        <article class="projet-card">
+
+
+            <!-- =================================================
+                 EN-TÊTE DU PROJET
+            ================================================== -->
+
+            <header class="projet-header">
+
+
+                <div class="e5-icone">
+
+                    <i class="fa-solid fa-server"></i>
+
+                </div>
+
+
+                <!-- TITRE RÉCUPÉRÉ DE CONFIG.JS -->
+
+                <h1 data-config="projet1.titre">
+
+                    Installation et configuration de Zabbix
+
+                </h1>
+
+
+                <div class="section-ligne"></div>
+
+
+                <!-- DESCRIPTION RÉCUPÉRÉE DE CONFIG.JS -->
+
+                <p data-config="projet1.description">
+
+                    Mise en place d'une solution
+                    de supervision réseau avec Zabbix.
+
+                </p>
+
+
+            </header>
+
+
+
+            <!-- =================================================
+                 IMAGE DU PROJET
+
+                 L'image utilisée est définie dans config.js :
+
+                 projet1.image
+
+                 Emplacement prévu :
+                 images/projet-zabbix.jpg
+            ================================================== -->
+
+            <div class="projet-image">
+
+                <img
+                    src="images/projet-zabbix.png"
+                    data-image="projet1.image"
+                    alt="Illustration du projet d'installation de Zabbix"
+                >
+
+            </div>
+
+
+
+            <!-- =================================================
+                 INFORMATIONS SUR LE PROJET
+            ================================================== -->
+
+            <section class="projet-informations">
+
+
+                <h2>
+
+                    <i class="fa-solid fa-circle-info"></i>
+
+                    Présentation du projet
+
+                </h2>
+
+
+                <p>
+
+                    Ce projet a pour objectif de mettre
+                    en place une solution permettant
+                    de superviser une infrastructure
+                    informatique.
+
+                </p>
+
+
+                <p>
+
+                    La solution utilisée est
+
+                    <strong class="texte-accent">
+                        Zabbix
+                    </strong>,
+
+                    un outil de supervision permettant
+                    de surveiller différents équipements,
+                    serveurs et services d'un réseau.
+
+                </p>
+
+
+                <p>
+
+                    Cette réalisation me permet
+                    de mettre en pratique des compétences
+                    liées aux systèmes et aux réseaux
+                    dans le cadre de ma formation
+                    en BTS SIO option SISR.
+
+                </p>
+
+
+
+                <!-- =============================================
+                     TECHNOLOGIES
+                ============================================== -->
+
+                <h2>
+
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                    Technologies utilisées
+
+                </h2>
+
+
+                <div class="projet-technologies">
+
+
+                    <span class="technologie">
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                        Zabbix
+
+                    </span>
+
+
+                    <span class="technologie">
+
+                        <i class="fa-brands fa-linux"></i>
+
+                        Linux
+
+                    </span>
+
+
+                    <span class="technologie">
+
+                        <i class="fa-solid fa-network-wired"></i>
+
+                        Réseau
+
+                    </span>
+
+
+                    <span class="technologie">
+
+                        <i class="fa-solid fa-server"></i>
+
+                        Serveur
+
+                    </span>
+
+
+                    <span class="technologie">
+
+                        <i class="fa-solid fa-desktop"></i>
+
+                        Supervision
+
+                    </span>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 BOUTONS
+            ================================================== -->
+
+            <div class="projet-actions">
+
+
+                <!-- CAHIER DES CHARGES -->
+
+                <a
+                    href="documents/cahier_zabbix.pdf"
+                    data-link="projet1.cahierDesCharges"
+                    class="btn"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <i class="fa-solid fa-file-pdf"></i>
+
+                    Voir mon cahier des charges
+
+                </a>
+
+
+                <!-- PROJET SUIVANT -->
+
+                <a
+                    href="projet2.html"
+                    class="btn btn-secondaire"
+                >
+
+                    Projet suivant
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+
+            </div>
+
+
+        </article>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         ICÔNES FLOTTANTES
+    ====================================================== -->
+
+    <div class="icones-flottantes">
+
+
+        <!-- LINKEDIN -->
+
+        <a
+            href="#"
+            class="icone-flottante"
+            data-linkedin
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Mon profil LinkedIn"
+            title="LinkedIn"
+        >
+
+            <i class="fa-brands fa-linkedin-in"></i>
+
+        </a>
+
+
+        <!-- WHATSAPP -->
+
+        <a
+            href="#"
+            class="icone-flottante"
+            data-whatsapp
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Me contacter sur WhatsApp"
+            title="WhatsApp"
+        >
+
+            <i class="fa-brands fa-whatsapp"></i>
+
+        </a>
+
+
+        <!-- EMAIL -->
+
+        <a
+            href="#"
+            class="icone-flottante"
+            data-email-link
+            aria-label="M'envoyer un e-mail"
+            title="E-mail"
+        >
+
+            <i class="fa-solid fa-envelope"></i>
+
+        </a>
+
+
+    </div>
+
+
+
+    <!-- =====================================================
+         PIED DE PAGE
+    ====================================================== -->
+
+    <footer class="footer">
+
+        <p>
+
+            ©
+
+            <span class="annee-actuelle"></span>
+
+            Blandy CONSTANTIN
+            —
+            BTS SIO option SISR
+
+        </p>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="config.js"></script>
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

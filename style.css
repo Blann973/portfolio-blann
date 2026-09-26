@@ -1,0 +1,1467 @@
+
+/* ==========================================================
+   PORTFOLIO BLANDY CONSTANTIN
+   BTS SIO - OPTION SISR
+
+   Feuille de style commune à toutes les pages.
+
+   IMPORTANT :
+   - Image de fond d'origine conservée
+   - Couleur turquoise d'origine conservée
+   - Présentation identique pour les deux projets
+   - Présentation identique pour les deux stages
+========================================================== */
+
+
+/* ==========================================================
+   1. VARIABLES GLOBALES
+========================================================== */
+
+:root {
+    --couleur-principale: #12c7d2;
+    --couleur-principale-hover: #0daab4;
+
+    --couleur-texte: #ffffff;
+    --couleur-texte-secondaire: #d9e4e8;
+
+    --fond-carte: rgba(0, 0, 0, 0.75);
+    --fond-carte-secondaire: rgba(0, 0, 0, 0.55);
+
+    --bordure: rgba(18, 199, 210, 0.35);
+
+    --rayon: 15px;
+    --rayon-bouton: 8px;
+
+    --largeur-contenu: 1100px;
+
+    --hauteur-navbar: 75px;
+
+    --transition: 0.3s ease;
+}
+
+
+/* ==========================================================
+   2. RESET ET CONFIGURATION GÉNÉRALE
+========================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: url("images/fond.jpg")
+                no-repeat center center fixed;
+
+    background-size: cover;
+
+    color: var(--couleur-texte);
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+::selection {
+    background: var(--couleur-principale);
+    color: white;
+}
+
+
+/* ==========================================================
+   3. BARRE DE NAVIGATION
+========================================================== */
+
+.navbar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    min-height: var(--hauteur-navbar);
+
+    background: var(--couleur-principale);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 30px;
+
+    z-index: 1000;
+
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+
+    color: white;
+
+    white-space: nowrap;
+}
+
+.nav-links {
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+
+    gap: 3px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links li a {
+    color: white;
+
+    text-decoration: none;
+
+    padding: 15px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    font-weight: bold;
+    font-size: 14px;
+
+    transition: background var(--transition);
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+
+/* ==========================================================
+   4. MENUS DÉROULANTS
+========================================================== */
+
+.dropdown-menu {
+    display: none;
+
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+
+    background: var(--couleur-principale);
+
+    min-width: 180px;
+
+    list-style: none;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+
+    z-index: 1001;
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu,
+.dropdown.open .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    width: 100%;
+}
+
+.dropdown-menu li a {
+    display: block;
+
+    padding: 13px 18px;
+
+    font-size: 14px;
+}
+
+.dropdown-menu li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+
+/* ==========================================================
+   5. MENU MOBILE
+========================================================== */
+
+.menu-toggle {
+    display: none;
+
+    background: transparent;
+    border: none;
+
+    color: white;
+
+    font-size: 28px;
+
+    padding: 5px;
+}
+
+
+/* ==========================================================
+   6. CONTENEUR PRINCIPAL
+========================================================== */
+
+.container {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+
+    padding: 120px 20px 50px;
+}
+
+.page-container {
+    width: 100%;
+    max-width: var(--largeur-contenu);
+
+    margin: auto;
+
+    padding: 120px 20px 60px;
+}
+
+
+/* ==========================================================
+   7. CARTES GÉNÉRALES
+========================================================== */
+
+.card {
+    background: var(--fond-carte);
+
+    padding: 40px;
+
+    border-radius: var(--rayon);
+
+    width: 80%;
+    max-width: 800px;
+
+    text-align: center;
+
+    border: 1px solid var(--bordure);
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+
+    animation: apparition 0.6s ease;
+}
+
+.card h1,
+.card h2 {
+    margin-bottom: 20px;
+}
+
+.card h1 {
+    font-size: 32px;
+}
+
+.card h2 {
+    font-size: 26px;
+}
+
+.card p {
+    margin-bottom: 15px;
+
+    line-height: 1.8;
+
+    color: var(--couleur-texte-secondaire);
+}
+
+
+/* ==========================================================
+   8. BOUTONS
+========================================================== */
+
+.btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 20px;
+
+    padding: 12px 25px;
+
+    background: var(--couleur-principale);
+
+    color: white;
+
+    border: none;
+
+    border-radius: var(--rayon-bouton);
+
+    font-weight: bold;
+    font-size: 14px;
+
+    text-decoration: none;
+
+    transition: all var(--transition);
+}
+
+.btn:hover {
+    background: var(--couleur-principale-hover);
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 5px 20px rgba(18, 199, 210, 0.35);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn-secondaire {
+    background: transparent;
+
+    border: 2px solid var(--couleur-principale);
+}
+
+.btn-secondaire:hover {
+    background: var(--couleur-principale);
+}
+
+.btn i {
+    font-size: 16px;
+}
+
+
+/* ==========================================================
+   9. TITRES ET SECTIONS
+========================================================== */
+
+.section-titre {
+    text-align: center;
+
+    font-size: 32px;
+
+    margin-bottom: 15px;
+}
+
+.section-description {
+    text-align: center;
+
+    color: var(--couleur-texte-secondaire);
+
+    line-height: 1.8;
+
+    margin-bottom: 35px;
+}
+
+.texte-accent {
+    color: var(--couleur-principale);
+}
+
+.section-ligne {
+    width: 80px;
+    height: 4px;
+
+    background: var(--couleur-principale);
+
+    margin: 15px auto 30px;
+
+    border-radius: 10px;
+}
+
+
+/* ==========================================================
+   10. PAGE D'ACCUEIL
+========================================================== */
+
+.accueil {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 120px 20px 60px;
+}
+
+.accueil-contenu {
+    width: 100%;
+    max-width: 850px;
+
+    background: var(--fond-carte);
+
+    border: 1px solid var(--bordure);
+
+    border-radius: var(--rayon);
+
+    padding: 50px 35px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+
+    animation: apparition 0.8s ease;
+}
+
+.accueil-contenu h1 {
+    font-size: 40px;
+
+    margin-bottom: 20px;
+}
+
+.accueil-contenu h2 {
+    font-size: 23px;
+
+    color: var(--couleur-principale);
+
+    margin-bottom: 20px;
+}
+
+.accueil-contenu p {
+    font-size: 16px;
+
+    line-height: 1.9;
+
+    color: var(--couleur-texte-secondaire);
+}
+
+.accueil-boutons {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    margin-top: 15px;
+}
+
+
+/* ==========================================================
+   11. PAGE PROFIL
+========================================================== */
+
+.profil-contenu {
+    max-width: 850px;
+
+    margin: auto;
+
+    background: var(--fond-carte);
+
+    border: 1px solid var(--bordure);
+
+    border-radius: var(--rayon);
+
+    padding: 45px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+}
+
+.profil-contenu h1 {
+    font-size: 34px;
+
+    margin-bottom: 15px;
+}
+
+.profil-formation {
+    color: var(--couleur-principale);
+
+    font-size: 19px;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+}
+
+.profil-description {
+    line-height: 1.9;
+
+    color: var(--couleur-texte-secondaire);
+
+    margin-bottom: 20px;
+}
+
+.profil-competences {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 25px;
+}
+
+.competence {
+    padding: 10px 15px;
+
+    background: rgba(18, 199, 210, 0.12);
+
+    border: 1px solid var(--bordure);
+
+    border-radius: 25px;
+
+    font-size: 14px;
+}
+
+
+/* ==========================================================
+   12. PROJETS - STYLE COMMUN
+
+   Ce style est utilisé par :
+   - projet1.html
+   - projet2.html
+
+   Les deux projets auront la même présentation.
+========================================================== */
+
+.projet-container {
+    width: 100%;
+    max-width: 950px;
+
+    margin: auto;
+
+    padding: 120px 20px 60px;
+}
+
+.projet-card {
+    background: var(--fond-carte);
+
+    border: 1px solid var(--bordure);
+
+    border-radius: var(--rayon);
+
+    padding: 35px;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+
+    animation: apparition 0.6s ease;
+}
+
+.projet-header {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+.projet-header h1 {
+    font-size: 32px;
+
+    margin-bottom: 15px;
+}
+
+.projet-header p {
+    color: var(--couleur-texte-secondaire);
+
+    line-height: 1.8;
+}
+
+.projet-image {
+    width: 100%;
+    max-width: 750px;
+
+    margin: 25px auto;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    border: 1px solid var(--bordure);
+
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.projet-image img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    max-height: 420px;
+
+    object-fit: contain;
+}
+
+.projet-informations {
+    margin-top: 25px;
+}
+
+.projet-informations h2 {
+    color: var(--couleur-principale);
+
+    font-size: 22px;
+
+    margin-bottom: 15px;
+}
+
+.projet-informations p {
+    color: var(--couleur-texte-secondaire);
+
+    line-height: 1.9;
+
+    margin-bottom: 15px;
+}
+
+.projet-technologies {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 15px;
+}
+
+.technologie {
+    padding: 8px 15px;
+
+    background: rgba(18, 199, 210, 0.15);
+
+    border: 1px solid var(--bordure);
+
+    border-radius: 20px;
+
+    font-size: 13px;
+}
+
+.projet-actions {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+
+/* ==========================================================
+   13. STAGES - STYLE COMMUN
+
+   Ce style est utilisé par :
+   - stage1.html
+   - stage2.html
+
+   Les deux stages auront la même présentation.
+========================================================== */
+
+.stage-container {
+    width: 100%;
+    max-width: 950px;
+
+    margin: auto;
+
+    padding: 120px 20px 60px;
+}
+
+.stage-card {
+    background: var(--fond-carte);
+
+    border: 1px solid var(--bordure);
+
+    border-radius: var(--rayon);
+
+    padding: 35px;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+
+    animation: apparition 0.6s ease;
+}
+
+.stage-header {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+.stage-header h1 {
+    font-size: 32px;
+
+    margin-bottom: 15px;
+}
+
+.stage-header p {
+    color: var(--couleur-texte-secondaire);
+
+    line-height: 1.8;
+}
+
+.stage-image {
+    width: 100%;
+    max-width: 750px;
+
+    margin: 25px auto;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    border: 1px solid var(--bordure);
+
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.stage-image img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    max-height: 420px;
+
+    object-fit: contain;
+}
+
+.stage-informations {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+
+    margin-top: 25px;
+}
+
+.stage-info {
+    background: var(--fond-carte-secondaire);
+
+    border: 1px solid var(--bordure);
+
+    border-radius: 10px;
+
+    padding: 20px;
+}
+
+.stage-info h3 {
+    color: var(--couleur-principale);
+
+    font-size: 15px;
+
+    margin-bottom: 10px;
+}
+
+.stage-info p {
+    color: var(--couleur-texte-secondaire);
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+.stage-description {
+    margin-top: 30px;
+}
+
+.stage-description h2 {
+    color: var(--couleur-principale);
+
+    font-size: 22px;
+
+    margin-bottom: 15px;
+}
+
+.stage-description p {
+    color: var(--couleur-texte-secondaire);
+
+    line-height: 1.9;
+}
+
+.stage-actions {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+
+/* ==========================================================
+   14. VEILLE INFORMATIQUE
+========================================================== */
+
+.veille-container {
+    width: 100%;
+    max-width: 950px;
+
+    margin: auto;
+
+    padding: 120px 20px 60px;
+}
+
+.veille-card {
+    background: var(--fond-carte);
+
+    border: 1px solid var(--bordure);
+
+    border-radius: var(--rayon);
+
+    padding: 35px;
+
+    margin-bottom: 25px;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+}
+
+.veille-card h1,
+.veille-card h2 {
+    margin-bottom: 20px;
+}
+
+.veille-card h2 {
+    color: var(--couleur-principale);
+}
+
+.veille-card p {
+    line-height: 1.9;
+
+    color: var(--couleur-texte-secondaire);
+
+    margin-bottom: 15px;
+}
+
+.veille-lien {
+    color: var(--couleur-principale);
+
+    text-decoration: underline;
+}
+
+.veille-lien:hover {
+    color: white;
+}
+
+
+/* ==========================================================
+   15. ÉPREUVE E5
+========================================================== */
+
+.e5-container {
+    width: 100%;
+    max-width: 850px;
+
+    margin: auto;
+
+    padding: 120px 20px 60px;
+}
+
+.e5-card {
+    background: var(--fond-carte);
+
+    border: 1px solid var(--bordure);
+
+    border-radius: var(--rayon);
+
+    padding: 45px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+}
+
+.e5-card h1 {
+    font-size: 30px;
+
+    margin-bottom: 20px;
+}
+
+.e5-card p {
+    line-height: 1.9;
+
+    color: var(--couleur-texte-secondaire);
+}
+
+.e5-icone {
+    font-size: 55px;
+
+    color: var(--couleur-principale);
+
+    margin-bottom: 25px;
+}
+
+
+/* ==========================================================
+   16. PAGE CONTACT
+========================================================== */
+
+.contact-container {
+    width: 100%;
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 120px 20px 60px;
+}
+
+.contact-card {
+    background: var(--fond-carte);
+
+    border: 1px solid var(--bordure);
+
+    border-radius: var(--rayon);
+
+    padding: 40px;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+}
+
+.contact-card h1 {
+    text-align: center;
+
+    font-size: 32px;
+
+    margin-bottom: 20px;
+}
+
+.contact-description {
+    text-align: center;
+
+    color: var(--couleur-texte-secondaire);
+
+    line-height: 1.8;
+
+    margin-bottom: 30px;
+}
+
+.contact-informations {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+}
+
+.contact-info {
+    background: var(--fond-carte-secondaire);
+
+    border: 1px solid var(--bordure);
+
+    border-radius: 12px;
+
+    padding: 25px 15px;
+
+    text-align: center;
+
+    transition: transform var(--transition);
+}
+
+.contact-info:hover {
+    transform: translateY(-5px);
+}
+
+.contact-info i {
+    font-size: 30px;
+
+    color: var(--couleur-principale);
+
+    margin-bottom: 15px;
+}
+
+.contact-info h3 {
+    font-size: 16px;
+
+    margin-bottom: 12px;
+}
+
+.contact-info a,
+.contact-info p {
+    color: var(--couleur-texte-secondaire);
+
+    font-size: 13px;
+
+    overflow-wrap: anywhere;
+
+    line-height: 1.7;
+}
+
+.contact-info a:hover {
+    color: var(--couleur-principale);
+}
+
+
+/* ==========================================================
+   17. FORMULAIRE DE CONTACT
+========================================================== */
+
+.contact-form {
+    margin-top: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid var(--bordure);
+
+    border-radius: 8px;
+
+    color: white;
+
+    outline: none;
+
+    transition: border-color var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--couleur-principale);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #b8c7cc;
+}
+
+.form-group textarea {
+    min-height: 140px;
+
+    resize: vertical;
+}
+
+.form-actions {
+    text-align: center;
+}
+
+
+/* ==========================================================
+   18. ICÔNES FLOTTANTES
+========================================================== */
+
+.icones-flottantes {
+    position: fixed;
+
+    right: 20px;
+    bottom: 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    z-index: 900;
+}
+
+.icone-flottante {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background: var(--couleur-principale);
+
+    color: white;
+
+    border-radius: 50%;
+
+    font-size: 21px;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+
+    transition: all var(--transition);
+}
+
+.icone-flottante:hover {
+    transform: translateY(-5px) scale(1.08);
+
+    background: var(--couleur-principale-hover);
+}
+
+
+/* ==========================================================
+   19. PIED DE PAGE
+========================================================== */
+
+.footer {
+    width: 100%;
+
+    background: rgba(0, 0, 0, 0.85);
+
+    border-top: 1px solid var(--bordure);
+
+    padding: 25px 20px;
+
+    text-align: center;
+}
+
+.footer p {
+    color: var(--couleur-texte-secondaire);
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+.footer a {
+    color: var(--couleur-principale);
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* ==========================================================
+   20. ANIMATIONS
+========================================================== */
+
+@keyframes apparition {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes flottement {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.animation-flottante {
+    animation: flottement 3s ease-in-out infinite;
+}
+
+
+/* ==========================================================
+   21. RESPONSIVE - TABLETTES
+========================================================== */
+
+@media screen and (max-width: 992px) {
+
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    .nav-links li a {
+        padding: 12px 9px;
+
+        font-size: 12px;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .contact-informations {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .accueil-contenu h1 {
+        font-size: 34px;
+    }
+}
+
+
+/* ==========================================================
+   22. RESPONSIVE - MOBILES
+========================================================== */
+
+@media screen and (max-width: 768px) {
+
+    :root {
+        --hauteur-navbar: 70px;
+    }
+
+    body {
+        background-attachment: scroll;
+    }
+
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+
+        position: absolute;
+
+        top: 100%;
+        left: 0;
+
+        width: 100%;
+
+        background: var(--couleur-principale);
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        padding: 10px 0;
+
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+        max-height: calc(100vh - 70px);
+
+        overflow-y: auto;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links li a {
+        padding: 14px 25px;
+
+        font-size: 14px;
+    }
+
+    .dropdown-menu {
+        position: static;
+
+        width: 100%;
+
+        box-shadow: none;
+
+        background: rgba(0, 0, 0, 0.12);
+    }
+
+    .dropdown-menu li a {
+        padding-left: 45px;
+    }
+
+    .container {
+        padding: 105px 15px 40px;
+    }
+
+    .page-container,
+    .projet-container,
+    .stage-container,
+    .veille-container,
+    .e5-container,
+    .contact-container {
+        padding: 105px 15px 40px;
+    }
+
+    .card {
+        width: 100%;
+
+        padding: 30px 20px;
+    }
+
+    .card h1 {
+        font-size: 27px;
+    }
+
+    .accueil {
+        padding: 105px 15px 40px;
+    }
+
+    .accueil-contenu {
+        padding: 35px 20px;
+    }
+
+    .accueil-contenu h1 {
+        font-size: 29px;
+    }
+
+    .accueil-contenu h2 {
+        font-size: 19px;
+    }
+
+    .profil-contenu {
+        padding: 30px 20px;
+    }
+
+    .profil-contenu h1 {
+        font-size: 28px;
+    }
+
+    .projet-card,
+    .stage-card,
+    .veille-card,
+    .e5-card,
+    .contact-card {
+        padding: 25px 20px;
+    }
+
+    .projet-header h1,
+    .stage-header h1 {
+        font-size: 27px;
+    }
+
+    .stage-informations {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-informations {
+        grid-template-columns: 1fr;
+    }
+
+    .projet-image img,
+    .stage-image img {
+        max-height: 300px;
+    }
+
+    .icones-flottantes {
+        right: 12px;
+        bottom: 15px;
+    }
+
+    .icone-flottante {
+        width: 42px;
+        height: 42px;
+
+        font-size: 18px;
+    }
+}
+
+
+/* ==========================================================
+   23. PETITS ÉCRANS
+========================================================== */
+
+@media screen and (max-width: 480px) {
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .accueil-contenu h1 {
+        font-size: 25px;
+    }
+
+    .accueil-contenu h2 {
+        font-size: 17px;
+    }
+
+    .section-titre {
+        font-size: 26px;
+    }
+
+    .projet-header h1,
+    .stage-header h1 {
+        font-size: 24px;
+    }
+
+    .btn {
+        padding: 11px 18px;
+
+        font-size: 13px;
+    }
+
+    .accueil-boutons,
+    .projet-actions,
+    .stage-actions {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .accueil-boutons .btn,
+    .projet-actions .btn,
+    .stage-actions .btn {
+        width: 100%;
+    }
+}
+
+
+/* ==========================================================
+   24. ACCESSIBILITÉ
+========================================================== */
+
+:focus-visible {
+    outline: 3px solid var(--couleur-principale);
+
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+
+        transition-duration: 0.01ms !important;
+
+        scroll-behavior: auto !important;
+    }
+}

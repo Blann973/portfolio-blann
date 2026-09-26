@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Projet 2 de Blandy CONSTANTIN - BTS SIO option SISR."
+    >
+
+    <title>
+        Projet 2 | Portfolio Blandy CONSTANTIN
+    </title>
+
+
+    <!-- CSS PRINCIPAL -->
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+
+    <!-- FONT AWESOME -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         BARRE DE NAVIGATION
+    ====================================================== -->
+
+    <nav class="navbar">
+
+
+        <!-- LOGO -->
+
+        <a
+            href="index.html"
+            class="logo"
+        >
+            PORTFOLIO BLANDY
+        </a>
+
+
+        <!-- MENU MOBILE -->
+
+        <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Ouvrir le menu"
+            aria-expanded="false"
+        >
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+
+        <!-- NAVIGATION -->
+
+        <ul class="nav-links">
+
+
+            <!-- ACCUEIL -->
+
+            <li>
+
+                <a href="index.html">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    Accueil
+
+                </a>
+
+            </li>
+
+
+            <!-- PROFIL -->
+
+            <li>
+
+                <a href="profil.html">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    Profil
+
+                </a>
+
+            </li>
+
+
+            <!-- =================================================
+                 PROJETS
+            ================================================== -->
+
+            <li class="dropdown">
+
+                <a
+                    href="#"
+                    class="dropdown-toggle active"
+                >
+
+                    <i class="fa-solid fa-diagram-project"></i>
+
+                    Projet
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </a>
+
+
+                <ul class="dropdown-menu">
+
+
+                    <!-- PROJET 1 -->
+
+                    <li>
+
+                        <a href="projet1.html">
+
+                            <i class="fa-solid fa-server"></i>
+
+                            Projet 1
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- PROJET 2 -->
+
+                    <li>
+
+                        <a
+                            href="projet2.html"
+                            class="active"
+                        >
+
+                            <i class="fa-solid fa-network-wired"></i>
+
+                            Projet 2
+
+                        </a>
+
+                    </li>
+
+
+                </ul>
+
+            </li>
+
+
+            <!-- =================================================
+                 STAGES
+            ================================================== -->
+
+            <li class="dropdown">
+
+                <a
+                    href="#"
+                    class="dropdown-toggle"
+                >
+
+                    <i class="fa-solid fa-briefcase"></i>
+
+                    Stage
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </a>
+
+
+                <ul class="dropdown-menu">
+
+
+                    <!-- STAGE 1 -->
+
+                    <li>
+
+                        <a href="stage1.html">
+
+                            <i class="fa-solid fa-building"></i>
+
+                            Stage 1
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- STAGE 2 -->
+
+                    <li>
+
+                        <a href="stage2.html">
+
+                            <i class="fa-solid fa-building"></i>
+
+                            Stage 2
+
+                        </a>
+
+                    </li>
+
+
+                </ul>
+
+            </li>
+
+
+            <!-- VEILLE -->
+
+            <li>
+
+                <a href="veille.html">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    Veille informatique
+
+                </a>
+
+            </li>
+
+
+            <!-- E5 -->
+
+            <li>
+
+                <a href="e5.html">
+
+                    <i class="fa-solid fa-graduation-cap"></i>
+
+                    E5
+
+                </a>
+
+            </li>
+
+
+            <!-- CONTACT -->
+
+            <li>
+
+                <a href="contact.html">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    Contact
+
+                </a>
+
+            </li>
+
+
+        </ul>
+
+    </nav>
+
+
+
+    <!-- =====================================================
+         CONTENU DU PROJET 2
+    ====================================================== -->
+
+    <main class="projet-container">
+
+
+        <article class="projet-card">
+
+
+            <!-- =================================================
+                 EN-TÊTE DU PROJET
+            ================================================== -->
+
+            <header class="projet-header">
+
+
+                <div class="e5-icone">
+
+                    <i class="fa-solid fa-network-wired"></i>
+
+                </div>
+
+
+                <!-- TITRE DEPUIS CONFIG.JS -->
+
+                <h1 data-config="projet2.titre">
+
+                    Projet 2
+
+                </h1>
+
+
+                <div class="section-ligne"></div>
+
+
+                <!-- DESCRIPTION DEPUIS CONFIG.JS -->
+
+                <p data-config="projet2.description">
+
+                    Description de mon deuxième projet.
+
+                </p>
+
+
+            </header>
+
+
+
+            <!-- =================================================
+                 IMAGE DU PROJET
+
+                 Le chemin est défini dans config.js :
+
+                 projet2.image
+            ================================================== -->
+
+            <div class="projet-image">
+
+                <img
+                    src="images/projet2.jpg"
+                    data-image="projet2.image"
+                    alt="Illustration de mon deuxième projet"
+                >
+
+            </div>
+
+
+
+            <!-- =================================================
+                 INFORMATIONS DU PROJET
+            ================================================== -->
+
+            <section class="projet-informations">
+
+
+                <h2>
+
+                    <i class="fa-solid fa-circle-info"></i>
+
+                    Présentation du projet
+
+                </h2>
+
+
+                <p>
+
+                    Cette section présente mon deuxième
+                    projet réalisé dans le cadre de ma
+                    formation en BTS SIO option SISR.
+
+                </p>
+
+
+                <p>
+
+                    La description détaillée du projet,
+                    ses objectifs, le contexte de sa
+                    réalisation ainsi que les différentes
+                    étapes seront ajoutés lorsque le projet
+                    sera défini.
+
+                </p>
+
+
+                <p>
+
+                    Les informations principales comme
+                    le titre, la description, l'image
+                    et le document associé peuvent être
+                    modifiées directement depuis
+
+                    <strong class="texte-accent">
+                        config.js
+                    </strong>.
+
+                </p>
+
+
+
+                <!-- =============================================
+                     TECHNOLOGIES
+                ============================================== -->
+
+                <h2>
+
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                    Technologies utilisées
+
+                </h2>
+
+
+                <div class="projet-technologies">
+
+
+                    <span class="technologie">
+
+                        <i class="fa-solid fa-network-wired"></i>
+
+                        Réseau
+
+                    </span>
+
+
+                    <span class="technologie">
+
+                        <i class="fa-solid fa-server"></i>
+
+                        Systèmes
+
+                    </span>
+
+
+                    <span class="technologie">
+
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                        À compléter
+
+                    </span>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 BOUTONS
+            ================================================== -->
+
+            <div class="projet-actions">
+
+
+                <!-- PROJET PRÉCÉDENT -->
+
+                <a
+                    href="projet1.html"
+                    class="btn btn-secondaire"
+                >
+
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    Projet précédent
+
+                </a>
+
+
+                <!-- CAHIER DES CHARGES -->
+
+                <a
+                    href="documents/cahier_projet2.pdf"
+                    data-link="projet2.cahierDesCharges"
+                    class="btn"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <i class="fa-solid fa-file-pdf"></i>
+
+                    Voir mon cahier des charges
+
+                </a>
+
+
+            </div>
+
+
+        </article>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         ICÔNES FLOTTANTES
+    ====================================================== -->
+
+    <div class="icones-flottantes">
+
+
+        <!-- LINKEDIN -->
+
+        <a
+            href="#"
+            class="icone-flottante"
+            data-linkedin
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Mon profil LinkedIn"
+            title="LinkedIn"
+        >
+
+            <i class="fa-brands fa-linkedin-in"></i>
+
+        </a>
+
+
+        <!-- WHATSAPP -->
+
+        <a
+            href="#"
+            class="icone-flottante"
+            data-whatsapp
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Me contacter sur WhatsApp"
+            title="WhatsApp"
+        >
+
+            <i class="fa-brands fa-whatsapp"></i>
+
+        </a>
+
+
+        <!-- EMAIL -->
+
+        <a
+            href="#"
+            class="icone-flottante"
+            data-email-link
+            aria-label="M'envoyer un e-mail"
+            title="E-mail"
+        >
+
+            <i class="fa-solid fa-envelope"></i>
+
+        </a>
+
+
+    </div>
+
+
+
+    <!-- =====================================================
+         PIED DE PAGE
+    ====================================================== -->
+
+    <footer class="footer">
+
+        <p>
+
+            ©
+
+            <span class="annee-actuelle"></span>
+
+            Blandy CONSTANTIN
+            —
+            BTS SIO option SISR
+
+        </p>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="config.js"></script>
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

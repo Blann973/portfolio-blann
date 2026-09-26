@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Stage 1 de Blandy CONSTANTIN - BTS SIO option SISR."
+    >
+
+    <title>
+        Stage 1 | Portfolio Blandy CONSTANTIN
+    </title>
+
+
+    <!-- CSS PRINCIPAL -->
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+
+    <!-- FONT AWESOME -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         BARRE DE NAVIGATION
+    ====================================================== -->
+
+    <nav class="navbar">
+
+
+        <!-- LOGO -->
+
+        <a
+            href="index.html"
+            class="logo"
+        >
+            PORTFOLIO BLANDY
+        </a>
+
+
+        <!-- MENU MOBILE -->
+
+        <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Ouvrir le menu"
+            aria-expanded="false"
+        >
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+
+        <!-- NAVIGATION -->
+
+        <ul class="nav-links">
+
+
+            <!-- ACCUEIL -->
+
+            <li>
+
+                <a href="index.html">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    Accueil
+
+                </a>
+
+            </li>
+
+
+            <!-- PROFIL -->
+
+            <li>
+
+                <a href="profil.html">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    Profil
+
+                </a>
+
+            </li>
+
+
+            <!-- =================================================
+                 PROJETS
+            ================================================== -->
+
+            <li class="dropdown">
+
+                <a
+                    href="#"
+                    class="dropdown-toggle"
+                >
+
+                    <i class="fa-solid fa-diagram-project"></i>
+
+                    Projet
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </a>
+
+
+                <ul class="dropdown-menu">
+
+
+                    <li>
+
+                        <a href="projet1.html">
+
+                            <i class="fa-solid fa-server"></i>
+
+                            Projet 1
+
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a href="projet2.html">
+
+                            <i class="fa-solid fa-network-wired"></i>
+
+                            Projet 2
+
+                        </a>
+
+                    </li>
+
+
+                </ul>
+
+            </li>
+
+
+            <!-- =================================================
+                 STAGES
+            ================================================== -->
+
+            <li class="dropdown">
+
+                <a
+                    href="#"
+                    class="dropdown-toggle active"
+                >
+
+                    <i class="fa-solid fa-briefcase"></i>
+
+                    Stage
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </a>
+
+
+                <ul class="dropdown-menu">
+
+
+                    <!-- STAGE 1 -->
+
+                    <li>
+
+                        <a
+                            href="stage1.html"
+                            class="active"
+                        >
+
+                            <i class="fa-solid fa-building"></i>
+
+                            Stage 1
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- STAGE 2 -->
+
+                    <li>
+
+                        <a href="stage2.html">
+
+                            <i class="fa-solid fa-building"></i>
+
+                            Stage 2
+
+                        </a>
+
+                    </li>
+
+
+                </ul>
+
+            </li>
+
+
+            <!-- VEILLE -->
+
+            <li>
+
+                <a href="veille.html">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    Veille informatique
+
+                </a>
+
+            </li>
+
+
+            <!-- E5 -->
+
+            <li>
+
+                <a href="e5.html">
+
+                    <i class="fa-solid fa-graduation-cap"></i>
+
+                    E5
+
+                </a>
+
+            </li>
+
+
+            <!-- CONTACT -->
+
+            <li>
+
+                <a href="contact.html">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    Contact
+
+                </a>
+
+            </li>
+
+
+        </ul>
+
+    </nav>
+
+
+
+    <!-- =====================================================
+         CONTENU DU STAGE 1
+    ====================================================== -->
+
+    <main class="stage-container">
+
+
+        <article class="stage-card">
+
+
+            <!-- =================================================
+                 EN-TÊTE
+            ================================================== -->
+
+            <header class="stage-header">
+
+
+                <div class="e5-icone">
+
+                    <i class="fa-solid fa-building"></i>
+
+                </div>
+
+
+                <h1>
+                    Mon stage à la
+
+                    <span
+                        class="texte-accent"
+                        data-config="stage1.entreprise"
+                    >
+                        Mairie de Cayenne
+                    </span>
+                </h1>
+
+
+                <div class="section-ligne"></div>
+
+
+                <p data-config="stage1.description">
+
+                    Stage réalisé au sein du service
+                    informatique de la Mairie de Cayenne,
+                    principalement dans la partie réseau.
+
+                </p>
+
+
+            </header>
+
+
+
+            <!-- =================================================
+                 PHOTO DE L'ENTREPRISE
+
+                 Le chemin est défini dans config.js :
+                 stage1.image
+            ================================================== -->
+
+            <div class="stage-image">
+
+                <img
+                    src="images/mairie-cayenne.png"
+                    data-image="stage1.image"
+                    alt="Photo de la Mairie de Cayenne"
+                >
+
+            </div>
+
+
+
+            <!-- =================================================
+                 INFORMATIONS PRINCIPALES
+
+                 Ces informations viennent de config.js.
+            ================================================== -->
+
+            <section class="stage-informations">
+
+
+                <!-- ENTREPRISE -->
+
+                <div class="stage-info">
+
+                    <h3>
+
+                        <i class="fa-solid fa-building"></i>
+
+                        Entreprise / Organisme
+
+                    </h3>
+
+
+                    <p data-config="stage1.entreprise">
+
+                        Mairie de Cayenne
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- VILLE -->
+
+                <div class="stage-info">
+
+                    <h3>
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        Ville
+
+                    </h3>
+
+
+                    <p data-config="stage1.ville">
+
+                        Cayenne
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- POSTE -->
+
+                <div class="stage-info">
+
+                    <h3>
+
+                        <i class="fa-solid fa-user-tie"></i>
+
+                        Poste pendant mon stage
+
+                    </h3>
+
+
+                    <p data-config="stage1.poste">
+
+                        Stagiaire au service informatique - Réseau
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- DURÉE -->
+
+                <div class="stage-info">
+
+                    <h3>
+
+                        <i class="fa-solid fa-calendar-days"></i>
+
+                        Durée du stage
+
+                    </h3>
+
+
+                    <p data-config="stage1.duree">
+
+                        Durée à compléter
+
+                    </p>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 PRÉSENTATION DU STAGE
+            ================================================== -->
+
+            <section class="stage-description">
+
+
+                <h2>
+
+                    <i class="fa-solid fa-circle-info"></i>
+
+                    Présentation de mon stage
+
+                </h2>
+
+
+                <p>
+
+                    Dans le cadre de ma formation en
+
+                    <strong>
+                        BTS SIO option SISR
+                    </strong>,
+
+                    j'ai effectué mon stage au sein de la
+
+                    <strong class="texte-accent">
+                        Mairie de Cayenne
+                    </strong>.
+
+                </p>
+
+
+                <p>
+
+                    J'ai été accueilli au sein du
+
+                    <strong>
+                        service informatique
+                    </strong>,
+
+                    principalement dans la partie
+
+                    <strong>
+                        réseau
+                    </strong>.
+
+                </p>
+
+
+                <p>
+
+                    Cette expérience professionnelle
+                    m'a permis de découvrir le
+                    fonctionnement d'un service informatique
+                    en environnement professionnel et
+                    d'approfondir les connaissances
+                    acquises pendant ma formation.
+
+                </p>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 BOUTONS
+            ================================================== -->
+
+            <div class="stage-actions">
+
+
+                <!-- COMPTE RENDU -->
+
+                <a
+                    href="documents/rapport_stage1.pdf"
+                    data-link="stage1.rapport"
+                    class="btn"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <i class="fa-solid fa-file-pdf"></i>
+
+                    Voir mon compte rendu de stage
+
+                </a>
+
+
+                <!-- STAGE SUIVANT -->
+
+                <a
+                    href="stage2.html"
+                    class="btn btn-secondaire"
+                >
+
+                    Stage suivant
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+
+            </div>
+
+
+        </article>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         ICÔNES FLOTTANTES
+    ====================================================== -->
+
+    <div class="icones-flottantes">
+
+
+        <!-- LINKEDIN -->
+
+        <a
+            href="#"
+            class="icone-flottante"
+            data-linkedin
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Mon profil LinkedIn"
+            title="LinkedIn"
+        >
+
+            <i class="fa-brands fa-linkedin-in"></i>
+
+        </a>
+
+
+        <!-- WHATSAPP -->
+
+        <a
+            href="#"
+            class="icone-flottante"
+            data-whatsapp
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Me contacter sur WhatsApp"
+            title="WhatsApp"
+        >
+
+            <i class="fa-brands fa-whatsapp"></i>
+
+        </a>
+
+
+        <!-- EMAIL -->
+
+        <a
+            href="#"
+            class="icone-flottante"
+            data-email-link
+            aria-label="M'envoyer un e-mail"
+            title="E-mail"
+        >
+
+            <i class="fa-solid fa-envelope"></i>
+
+        </a>
+
+
+    </div>
+
+
+
+    <!-- =====================================================
+         PIED DE PAGE
+    ====================================================== -->
+
+    <footer class="footer">
+
+        <p>
+
+            ©
+
+            <span class="annee-actuelle"></span>
+
+            Blandy CONSTANTIN
+            —
+            BTS SIO option SISR
+
+        </p>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="config.js"></script>
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

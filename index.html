@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Portfolio de Blandy CONSTANTIN, étudiant en BTS SIO option SISR."
+    >
+
+    <title>
+        Accueil | Portfolio Blandy CONSTANTIN
+    </title>
+
+
+    <!-- =====================================================
+         FEUILLE DE STYLE PRINCIPALE
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+
+    <!-- =====================================================
+         FONT AWESOME
+         Utilisé pour les icônes du portfolio
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         BARRE DE NAVIGATION
+    ====================================================== -->
+
+    <nav class="navbar">
+
+        <!-- Logo / Nom du portfolio -->
+
+        <a
+            href="index.html"
+            class="logo"
+        >
+            PORTFOLIO BLANDY
+        </a>
+
+
+        <!-- Bouton menu pour téléphone -->
+
+        <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Ouvrir le menu"
+            aria-expanded="false"
+        >
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+
+        <!-- Navigation -->
+
+        <ul class="nav-links">
+
+
+            <!-- ACCUEIL -->
+
+            <li>
+
+                <a
+                    href="index.html"
+                    class="active"
+                >
+
+                    <i class="fa-solid fa-house"></i>
+
+                    Accueil
+
+                </a>
+
+            </li>
+
+
+            <!-- PROFIL -->
+
+            <li>
+
+                <a href="profil.html">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    Profil
+
+                </a>
+
+            </li>
+
+
+            <!-- =================================================
+                 PROJETS
+            ================================================== -->
+
+            <li class="dropdown">
+
+                <a
+                    href="#"
+                    class="dropdown-toggle"
+                >
+
+                    <i class="fa-solid fa-diagram-project"></i>
+
+                    Projet
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </a>
+
+
+                <ul class="dropdown-menu">
+
+                    <li>
+
+                        <a href="projet1.html">
+
+                            <i class="fa-solid fa-server"></i>
+
+                            Projet 1
+
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a href="projet2.html">
+
+                            <i class="fa-solid fa-network-wired"></i>
+
+                            Projet 2
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </li>
+
+
+            <!-- =================================================
+                 STAGES
+            ================================================== -->
+
+            <li class="dropdown">
+
+                <a
+                    href="#"
+                    class="dropdown-toggle"
+                >
+
+                    <i class="fa-solid fa-briefcase"></i>
+
+                    Stage
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </a>
+
+
+                <ul class="dropdown-menu">
+
+                    <li>
+
+                        <a href="stage1.html">
+
+                            <i class="fa-solid fa-building"></i>
+
+                            Stage 1
+
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a href="stage2.html">
+
+                            <i class="fa-solid fa-building"></i>
+
+                            Stage 2
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </li>
+
+
+            <!-- VEILLE -->
+
+            <li>
+
+                <a href="veille.html">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    Veille informatique
+
+                </a>
+
+            </li>
+
+
+            <!-- E5 -->
+
+            <li>
+
+                <a href="e5.html">
+
+                    <i class="fa-solid fa-graduation-cap"></i>
+
+                    E5
+
+                </a>
+
+            </li>
+
+
+            <!-- CONTACT -->
+
+            <li>
+
+                <a href="contact.html">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    Contact
+
+                </a>
+
+            </li>
+
+
+        </ul>
+
+    </nav>
+
+
+
+    <!-- =====================================================
+         SECTION PRINCIPALE / ACCUEIL
+    ====================================================== -->
+
+    <main class="accueil">
+
+
+        <section class="accueil-contenu">
+
+
+            <!-- Petite icône -->
+
+            <div class="e5-icone">
+
+                <i class="fa-solid fa-network-wired"></i>
+
+            </div>
+
+
+            <!-- Présentation -->
+
+            <h1>
+                Bienvenue sur mon
+                <span class="texte-accent">
+                    Portfolio
+                </span>
+            </h1>
+
+
+            <h2>
+
+                Blandy CONSTANTIN
+                •
+                BTS SIO option SISR
+
+            </h2>
+
+
+            <div class="section-ligne"></div>
+
+
+            <p>
+
+                Je suis
+
+                <strong data-config="profil.nom">
+                    Blandy CONSTANTIN
+                </strong>,
+
+                étudiant en
+
+                <strong>
+                    BTS Services Informatiques aux Organisations
+                </strong>,
+
+                option
+
+                <strong class="texte-accent">
+                    SISR
+                </strong>
+
+                (Solutions d'Infrastructure,
+                Systèmes et Réseaux).
+
+            </p>
+
+
+            <p>
+
+                Passionné par l'informatique et plus
+                particulièrement par les
+
+                <strong>
+                    réseaux,
+                    les systèmes,
+                    la virtualisation
+                    et la cybersécurité
+                </strong>,
+
+                ce portfolio me permet de présenter
+                mon parcours, mes projets,
+                mes stages ainsi que les compétences
+                acquises pendant ma formation.
+
+            </p>
+
+
+            <!-- =================================================
+                 BOUTONS
+            ================================================== -->
+
+            <div class="accueil-boutons">
+
+
+                <!-- Découvrir mon profil -->
+
+                <a
+                    href="profil.html"
+                    class="btn"
+                >
+
+                    <i class="fa-solid fa-user"></i>
+
+                    Découvrir mon profil
+
+                </a>
+
+
+                <!-- Mes projets -->
+
+                <a
+                    href="projet1.html"
+                    class="btn btn-secondaire"
+                >
+
+                    <i class="fa-solid fa-diagram-project"></i>
+
+                    Voir mes projets
+
+                </a>
+
+
+                <!-- Télécharger CV -->
+
+                <a
+                    href="documents/CV_Blandy.pdf"
+                    class="btn btn-secondaire"
+                    data-link="profil.cv"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <i class="fa-solid fa-file-pdf"></i>
+
+                    Télécharger mon CV
+
+                </a>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         ICÔNES FLOTTANTES
+
+         Les liens sont automatiquement récupérés
+         depuis config.js.
+    ====================================================== -->
+
+    <div class="icones-flottantes">
+
+
+        <!-- LinkedIn -->
+
+        <a
+            href="#"
+            class="icone-flottante"
+            data-linkedin
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Mon profil LinkedIn"
+            title="LinkedIn"
+        >
+
+            <i class="fa-brands fa-linkedin-in"></i>
+
+        </a>
+
+
+        <!-- WhatsApp -->
+
+        <a
+            href="#"
+            class="icone-flottante"
+            data-whatsapp
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Me contacter sur WhatsApp"
+            title="WhatsApp"
+        >
+
+            <i class="fa-brands fa-whatsapp"></i>
+
+        </a>
+
+
+        <!-- E-mail -->
+
+        <a
+            href="#"
+            class="icone-flottante"
+            data-email-link
+            aria-label="M'envoyer un e-mail"
+            title="E-mail"
+        >
+
+            <i class="fa-solid fa-envelope"></i>
+
+        </a>
+
+
+    </div>
+
+
+
+    <!-- =====================================================
+         PIED DE PAGE
+    ====================================================== -->
+
+    <footer class="footer">
+
+        <p>
+
+            ©
+            <span class="annee-actuelle"></span>
+
+            Blandy CONSTANTIN
+            —
+            BTS SIO option SISR
+
+        </p>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+
+         IMPORTANT :
+         config.js doit être chargé AVANT script.js.
+    ====================================================== -->
+
+    <script src="config.js"></script>
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
