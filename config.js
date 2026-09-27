@@ -99,7 +99,7 @@ const portfolioConfig = {
             "Stagiaire au service informatique - Réseau",
 
         duree:
-            "Durée à compléter",
+            "Du 27 Mai au 03 Juillet",
 
         description:
             "Stage réalisé au sein du service informatique de la Mairie de Cayenne, principalement dans la partie réseau.",
