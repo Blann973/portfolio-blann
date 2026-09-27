@@ -151,8 +151,7 @@ const portfolioConfig = {
         description:
             "Présentation de ma grille de synthèse E5 regroupant les compétences acquises au cours de ma formation en BTS SIO option SISR.",
 
-        grille:
-            "documents/grille_E5.pdf"
+        grille:"documents/grille_E5.xlsx"
     },
 
 
